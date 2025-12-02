@@ -1,0 +1,12 @@
+docker volume rm typesense-data postgres-data rabbitmq-data
+docker volume rm typesense-data postgres-data 
+docker volume ls
+
+Run azd up to provision and deploy your app to Azure.
+Run azd add to add new Azure components to your project.
+Run azd infra gen to generate IaC for your project to disk, allowing you to manually manage it.
+
+
+docker logs infra-production-dashboard-1
+
+docker compose up -d

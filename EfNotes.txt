@@ -1,0 +1,21 @@
+dotnet ef migrations add InitQuestions  --project QuestionService/QuestionService.csproj --startup-project QuestionService/QuestionService.csproj  --output-dir Data --context QuestionDbContext
+
+dotnet ef migrations add InitProfiles  --project ProfileService/ProfileService.csproj --startup-project ProfileService/ProfileService.csproj  --output-dir Data --context ProfileDbContext
+dotnet ef migrations add InitVote  --project VoteService/VoteService.csproj --startup-project VoteService/VoteService.csproj  --output-dir Data --context VoteDbContext
+
+
+dotnet ef migrations add AnswerAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService/QuestionService.csproj  --context QuestionDbContext
+dotnet ef migrations add AddedUsageCount  --project QuestionService/QuestionService.csproj --startup-project QuestionService/QuestionService.csproj  --context QuestionDbContext
+
+dotnet ef migrations add removeDisplayName  --project QuestionService/QuestionService.csproj --startup-project QuestionService/QuestionService.csproj  --context QuestionDbContext
+dotnet ef migrations add DiagnosisAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService/QuestionService.csproj  --context QuestionDbContext
+
+
+dotnet ef migrations add VoteAiAdded  --project VoteService/VoteService.csproj --startup-project VoteService/VoteService.csproj Data --context VoteDbContext
+dotnet ef migrations add VoteAiNewIndexAdded  --project VoteService/VoteService.csproj --startup-project VoteService/VoteService.csproj Data --context VoteDbContext
+dotnet ef migrations add VoteAiIndexChangedAdded  --project VoteService/VoteService.csproj --startup-project VoteService/VoteService.csproj --context VoteDbContext
+dotnet ef migrations add QuestionAiAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService
+dotnet ef migrations add AIModelAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService
+dotnet ef migrations add UserIadAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService
+dotnet ef migrations add HasVotedadAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService
+dotnet ef migrations add RoleAdded  --project QuestionService/QuestionService.csproj --startup-project QuestionService

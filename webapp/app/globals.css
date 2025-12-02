@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin '../hero.ts';
+
+/* HeroUI theme source */
+@source "../node_modules/@heroui/theme/dist/components/**/*.{js,ts,jsx,tsx}";
+
+/* Custom variants */
+@variant dark (.dark &);
+
+.ProseMirror:focus {
+    outline: none
+}
+
+

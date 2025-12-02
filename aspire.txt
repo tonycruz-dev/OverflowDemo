@@ -1,0 +1,1 @@
+aspire publish -o infra

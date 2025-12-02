@@ -1,0 +1,8 @@
+﻿🚀 Future Extension Ideas
+---------------------------------------------------------------
+Feature	                   |        Purpose
+---------------------------------------------------------------
+AI revision history	               Improve answers over time
+Model versioning	               Track evolution of responses
+User feedback rating	           RLHF-style learning
+Flag for moderation               Prevent harmful output
