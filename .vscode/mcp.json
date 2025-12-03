@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "questions-svr": {
+      "type": "sse",
+      "url": "http://localhost:7001/sse"
+    },
+    "profile-svr": {
+      "type": "sse",
+      "url": "http://localhost:5092/sse"
+    },
+    "search-svr": {
+      "type": "sse",
+      "url": "http://localhost:7002/sse"
+    },
+    "stat-svc": {
+      "type": "sse",
+      "url": "http://localhost:5159/sse"
+    },
+    "vote-svc": {
+      "type": "sse",
+      "url": "http://localhost:5189/sse"
+    }
+  }
+  
+}
