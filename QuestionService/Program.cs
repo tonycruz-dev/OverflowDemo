@@ -1,8 +1,6 @@
 using Common;
 using Contracts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
 using QuestionService.Clients.AI;
 using QuestionService.Data;
 using QuestionService.Extensions;
@@ -46,8 +44,14 @@ builder.Services.AddScoped<IGitHubModelsClient, GitHubModelsClient>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
+builder.Services
+    .AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
+
 var app = builder.Build();
 
+app.MapMcp();
 app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.

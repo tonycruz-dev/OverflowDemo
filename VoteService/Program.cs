@@ -24,9 +24,16 @@ await builder.UseWolverineWithRabbitMqAsync(opts =>
 });
 builder.AddNpgsqlDbContext<VoteDbContext>("voteDb");
 
+builder.Services
+    .AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
+
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
+app.MapMcp();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

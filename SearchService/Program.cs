@@ -49,9 +49,16 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services
+    .AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
+
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -63,6 +70,7 @@ if (app.Environment.IsDevelopment())
 
 //app.MapControllers();
 app.MapDefaultEndpoints();
+app.MapMcp();
 
 app.MapGet("/search", async (string query, ITypesenseClient client) =>
 {
